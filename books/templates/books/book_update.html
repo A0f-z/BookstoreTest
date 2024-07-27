@@ -1,11 +1,12 @@
 {% extends '_base.html' %}
 
 {% block page_title %}
-    Book Creation
+    Book edition
+    {{ book.title }}
 {% endblock %}
 
 {% block content %}
-    <h1>Create a new book</h1>
+    <h1>edit book</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
