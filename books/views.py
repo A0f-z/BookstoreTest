@@ -26,7 +26,6 @@ class BookUpdateView(generic.UpdateView):
     template_name = 'books/book_update.html'
 
 
-
 class BookDeleteView(generic.DeleteView):
     model = Book
     template_name = 'books/book_delete.html'
