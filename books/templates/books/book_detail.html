@@ -12,8 +12,10 @@
                     <div class="row w-sm-75 w-100">
                         <div class="col-xs-12 col-md-3 d-flex justify-content-center">
                             <div>
-                                <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*_oGNO3yGQpp4_n6-Fjx-Gg@2x.jpeg"
+                                {% if book.cover %}
+                                <img src="{{ book.cover.url }}"
                                      class="img-fluid rounded-start" alt="...">
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6 text-center text-md-end mt-md-1 mt-4">

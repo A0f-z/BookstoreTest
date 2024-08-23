@@ -11,8 +11,10 @@
                 <div class="card m-2" style="max-width: 45%">
                     <div class="row g-0 h-100" dir="rtl">
                         <div class="col-md-4">
-                            <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*_oGNO3yGQpp4_n6-Fjx-Gg@2x.jpeg"
-                                 class="img-fluid rounded-start" alt="...">
+                            {% if book.cover %}
+                                <img src="{{ book.cover.url}}"
+                                     class="img-fluid rounded-start" alt="...">
+                            {% endif %}
                         </div>
                         <div class="col-md-8 h-100">
                             <div class="d-flex flex-column justify-content-between h-100">
