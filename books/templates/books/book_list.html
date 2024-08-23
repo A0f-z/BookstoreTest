@@ -30,14 +30,20 @@
             {% endfor %}
         </div>
     </div>
-    <nav aria-label="Page navigation">
-  <ul class="pagination">
+    <nav aria-label="Page navigation" style="background-color: #4fbadc;">
+  <ul class="pagination justify-content-center mt-3" style="background-color: #4fbadc;">
       {% if page_obj.has_previous %}
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.previous_page_number }}" style="background-color: #57edf0;">Previous</a>
+          </li>
       {% endif %}
-    <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+    <li class="page-item">
+        <a class="page-link" href="#">{{ page_obj.number }}</a>
+    </li>
     {% if page_obj.has_next %}
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}"style="background-color: #57edf0;">Next</a>
+        </li>
     {% endif %}
   </ul>
     </nav>
